@@ -84,7 +84,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModeloAnimal.cs" />
+    <Compile Include="ModeloCompra.cs" />
     <Compile Include="ModeloConexionBdd.cs" />
+    <Compile Include="ModeloEspacio.cs" />
+    <Compile Include="ModeloJaula.cs" />
     <Compile Include="ModeloVisitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

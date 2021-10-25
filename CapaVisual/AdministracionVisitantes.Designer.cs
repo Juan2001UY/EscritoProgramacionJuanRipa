@@ -107,7 +107,7 @@
             this.dgvVisitantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisitantes.Location = new System.Drawing.Point(221, 24);
             this.dgvVisitantes.Name = "dgvVisitantes";
-            this.dgvVisitantes.Size = new System.Drawing.Size(240, 150);
+            this.dgvVisitantes.Size = new System.Drawing.Size(271, 184);
             this.dgvVisitantes.TabIndex = 7;
             // 
             // btnListarVisitantes
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(504, 220);
             this.Controls.Add(this.btnListarVisitantes);
             this.Controls.Add(this.dgvVisitantes);
             this.Controls.Add(this.btnEliminarVisitantes);

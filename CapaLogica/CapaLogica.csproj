@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControladorAnimal.cs" />
+    <Compile Include="ControladorCompra.cs" />
+    <Compile Include="ControladorJaula.cs" />
+    <Compile Include="ControladorEspacio.cs" />
     <Compile Include="ControladorVisitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

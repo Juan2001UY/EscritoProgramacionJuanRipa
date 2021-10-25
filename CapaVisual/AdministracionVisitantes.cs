@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
 
+
+
 namespace CapaVisual
 {
     public partial class AdministracionVisitantes : Form
@@ -22,6 +24,8 @@ namespace CapaVisual
         {
             CapaLogica.ControladorVisitante.AltaVisitante(txtCedula.Text, txtNombre.Text);
             MessageBox.Show("Agregado Correctamente");
+            txtCedula.Text = String.Empty;
+            txtNombre.Text = String.Empty;
 
         }
 
@@ -29,17 +33,22 @@ namespace CapaVisual
         {
             CapaLogica.ControladorVisitante.ModificarVisitante(txtNombre.Text, txtCedula.Text);
             MessageBox.Show("Modificado Correctamente");
+            txtCedula.Text = String.Empty;
+            txtNombre.Text = String.Empty;
         }
 
         private void btnEliminarVisitantes_Click(object sender, EventArgs e)
         {
             CapaLogica.ControladorVisitante.BajaVisitante(txtCedula.Text);
             MessageBox.Show("Eliminado Correctamente");
+            txtCedula.Text = String.Empty;
+            txtNombre.Text = String.Empty;
         }
 
         private void btnListarVisitantes_Click(object sender, EventArgs e)
         {
-            //dgvVisitantes.DataSource = tabla;
+            CapaLogica.ControladorVisitante.Obtener();
+          //  dgvVisitantes.DataSource = tabla;
         }
     }
 }

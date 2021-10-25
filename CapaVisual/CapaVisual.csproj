@@ -46,16 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministracionAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionAnimales.Designer.cs">
+      <DependentUpon>AdministracionAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionEspacios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionEspacios.Designer.cs">
+      <DependentUpon>AdministracionEspacios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionJaulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionJaulas.Designer.cs">
+      <DependentUpon>AdministracionJaulas.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministracionVisitantes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdministracionVisitantes.Designer.cs">
       <DependentUpon>AdministracionVisitantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdministrador.Designer.cs">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuVendedor.Designer.cs">
+      <DependentUpon>MenuVendedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdministracionAnimales.resx">
+      <DependentUpon>AdministracionAnimales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionEspacios.resx">
+      <DependentUpon>AdministracionEspacios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionJaulas.resx">
+      <DependentUpon>AdministracionJaulas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdministracionVisitantes.resx">
       <DependentUpon>AdministracionVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdministrador.resx">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuVendedor.resx">
+      <DependentUpon>MenuVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
