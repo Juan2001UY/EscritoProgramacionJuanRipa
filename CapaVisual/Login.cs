@@ -33,11 +33,13 @@ namespace CapaVisual
                    {
                         MenuAdministrador frm = new MenuAdministrador();
                         frm.Show();
+                        this.Hide();
                     }
                     else
                     {
                         MenuVendedor frm = new MenuVendedor();
                         frm.Show();
+                        this.Hide();
                     }
                 }
                 else
@@ -47,5 +49,9 @@ namespace CapaVisual
             }
         }
 
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

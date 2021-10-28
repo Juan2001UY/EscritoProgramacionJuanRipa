@@ -32,14 +32,16 @@
             this.lblCedulaComprador = new System.Windows.Forms.Label();
             this.lblTickets = new System.Windows.Forms.Label();
             this.txtCedulaComprador = new System.Windows.Forms.TextBox();
-            this.cbProductos = new System.Windows.Forms.ComboBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblMostrarPrecio = new System.Windows.Forms.Label();
+            this.LbTickets = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(87, 114);
+            this.btnComprar.Location = new System.Drawing.Point(15, 143);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(115, 23);
+            this.btnComprar.Size = new System.Drawing.Size(115, 55);
             this.btnComprar.TabIndex = 0;
             this.btnComprar.Text = "Reaizar Compra";
             this.btnComprar.UseVisualStyleBackColor = true;
@@ -48,16 +50,17 @@
             // lblCedulaComprador
             // 
             this.lblCedulaComprador.AutoSize = true;
-            this.lblCedulaComprador.Location = new System.Drawing.Point(12, 78);
+            this.lblCedulaComprador.Location = new System.Drawing.Point(12, 111);
             this.lblCedulaComprador.Name = "lblCedulaComprador";
             this.lblCedulaComprador.Size = new System.Drawing.Size(163, 13);
             this.lblCedulaComprador.TabIndex = 1;
             this.lblCedulaComprador.Text = "Ingrese la Cedula del Comprador:";
+            this.lblCedulaComprador.Click += new System.EventHandler(this.lblCedulaComprador_Click);
             // 
             // lblTickets
             // 
             this.lblTickets.AutoSize = true;
-            this.lblTickets.Location = new System.Drawing.Point(12, 34);
+            this.lblTickets.Location = new System.Drawing.Point(46, 23);
             this.lblTickets.Name = "lblTickets";
             this.lblTickets.Size = new System.Drawing.Size(45, 13);
             this.lblTickets.TabIndex = 2;
@@ -65,32 +68,51 @@
             // 
             // txtCedulaComprador
             // 
-            this.txtCedulaComprador.Location = new System.Drawing.Point(181, 75);
+            this.txtCedulaComprador.Location = new System.Drawing.Point(181, 108);
             this.txtCedulaComprador.Name = "txtCedulaComprador";
             this.txtCedulaComprador.Size = new System.Drawing.Size(100, 20);
             this.txtCedulaComprador.TabIndex = 3;
             // 
-            // cbProductos
+            // lblPrecio
             // 
-            this.cbProductos.FormattingEnabled = true;
-            this.cbProductos.Items.AddRange(new object[] {
-            "4 espacios (30$)",
-            "6 espacios ($40)",
-            "10 espacios ($100)",
-            "Todos los espacios ($250)"});
-            this.cbProductos.Location = new System.Drawing.Point(71, 31);
-            this.cbProductos.Name = "cbProductos";
-            this.cbProductos.Size = new System.Drawing.Size(144, 21);
-            this.cbProductos.TabIndex = 4;
-            this.cbProductos.Text = "Seleccione un Ticket";
-            this.cbProductos.SelectedIndexChanged += new System.EventHandler(this.cbProductos_SelectedIndexChanged);
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(141, 82);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(40, 13);
+            this.lblPrecio.TabIndex = 5;
+            this.lblPrecio.Text = "Precio:";
+            // 
+            // lblMostrarPrecio
+            // 
+            this.lblMostrarPrecio.AutoSize = true;
+            this.lblMostrarPrecio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMostrarPrecio.Location = new System.Drawing.Point(187, 82);
+            this.lblMostrarPrecio.Name = "lblMostrarPrecio";
+            this.lblMostrarPrecio.Size = new System.Drawing.Size(0, 13);
+            this.lblMostrarPrecio.TabIndex = 6;
+            // 
+            // LbTickets
+            // 
+            this.LbTickets.FormattingEnabled = true;
+            this.LbTickets.Items.AddRange(new object[] {
+            "4 Espacios",
+            "6 Espacios",
+            "10 Espacios",
+            "Todos los Espacios"});
+            this.LbTickets.Location = new System.Drawing.Point(15, 39);
+            this.LbTickets.Name = "LbTickets";
+            this.LbTickets.Size = new System.Drawing.Size(120, 56);
+            this.LbTickets.TabIndex = 7;
+            this.LbTickets.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // MenuVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 149);
-            this.Controls.Add(this.cbProductos);
+            this.ClientSize = new System.Drawing.Size(294, 206);
+            this.Controls.Add(this.LbTickets);
+            this.Controls.Add(this.lblMostrarPrecio);
+            this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtCedulaComprador);
             this.Controls.Add(this.lblTickets);
             this.Controls.Add(this.lblCedulaComprador);
@@ -108,6 +130,8 @@
         private System.Windows.Forms.Label lblCedulaComprador;
         private System.Windows.Forms.Label lblTickets;
         private System.Windows.Forms.TextBox txtCedulaComprador;
-        private System.Windows.Forms.ComboBox cbProductos;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblMostrarPrecio;
+        private System.Windows.Forms.ListBox LbTickets;
     }
 }

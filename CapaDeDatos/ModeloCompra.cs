@@ -12,6 +12,7 @@ namespace CapaDeDatos
         public string CedulaComprador;
         public string FechaDeCompra;
         public string Producto;
+        public string Precio;
 
 
         private void EjecutarQuery()
@@ -27,10 +28,11 @@ namespace CapaDeDatos
 
         private void AgregarCompra()
         {
-            this.Comando.CommandText = "INSERT INTO compras(CedulaComprador,Producto) VALUES(@cedulacomprador,@producto)";
+            this.Comando.CommandText = "INSERT INTO compras(CedulaComprador,Producto,Precio) VALUES(@cedulacomprador,@producto,@precio)";
 
             this.Comando.Parameters.AddWithValue("@cedulacomprador", this.CedulaComprador);
             this.Comando.Parameters.AddWithValue("@producto", this.Producto);
+            this.Comando.Parameters.AddWithValue("@precio", this.Precio);
             this.Comando.Prepare();
         }
     }
