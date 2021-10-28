@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace CapaDeDatos
 {
@@ -11,9 +12,9 @@ namespace CapaDeDatos
 
         public string Cedula;
         public string NombreVisitante;
-       
 
-    
+
+
 
         private void EjecutarQuery()
         {
@@ -49,28 +50,39 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
         }
-        public void ListarVisitante()
-        {
-            this.Comando.CommandText = "SELECT * FROM visitantes";
-            lector = this.Comando.ExecuteReader();
 
-        }
 
-        public void EliminarVisitante(string Cedula)
+
+        public MySqlDataReader Obtener()
         {
-            this.Comando.CommandText = "DELETE FROM visitantes WHERE Cedula = @CedulaAEliminar";
-            this.Comando.Parameters.AddWithValue("@CedulaAEliminar", this.Cedula);
+            this.Comando.CommandText = "SELECT Cedula,NombreVisitante FROM visitantes WHERE Cedula = @cedula";
+            this.Comando.Parameters.AddWithValue("@cedula", this.Cedula);
             this.Comando.Prepare();
-        }
+            return this.Comando.ExecuteReader();
 
-        public void CambiarVisitante()
-        {
-            this.Comando.CommandText = "UPDATE visitantes SET NombreVisitante = @nombrevisitante WHERE Cedula = @CedulaAModificar";
-            this.Comando.Parameters.AddWithValue("@nombrevisitante", this.NombreVisitante);
-            this.Comando.Parameters.AddWithValue("@CedulaAModificar", this.Cedula);
-            this.Comando.Prepare();
+            //this.lector.Read();
+
+            //this.Cedula = lector.GetString(0);
+           // this.NombreVisitante = lector.GetString(1);
 
         }
+            public void EliminarVisitante(string Cedula) {
 
+
+                this.Comando.CommandText = "DELETE FROM visitantes WHERE Cedula = @CedulaAEliminar";
+                this.Comando.Parameters.AddWithValue("@CedulaAEliminar", this.Cedula);
+                this.Comando.Prepare();
+            }
+
+
+            public void CambiarVisitante()
+            {
+                this.Comando.CommandText = "UPDATE visitantes SET NombreVisitante = @nombrevisitante WHERE Cedula = @CedulaAModificar";
+                this.Comando.Parameters.AddWithValue("@nombrevisitante", this.NombreVisitante);
+                this.Comando.Parameters.AddWithValue("@CedulaAModificar", this.Cedula);
+                this.Comando.Prepare();
+
+            }
+
+        }
     }
-}

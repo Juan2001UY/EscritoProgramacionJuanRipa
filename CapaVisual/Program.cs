@@ -16,7 +16,7 @@ namespace CapaVisual
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuVendedor());
+            Application.Run(new Login());
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
+using MySql.Data.MySqlClient;
 
 
 
@@ -47,8 +48,13 @@ namespace CapaVisual
 
         private void btnListarVisitantes_Click(object sender, EventArgs e)
         {
-            CapaLogica.ControladorVisitante.Obtener();
-          //  dgvVisitantes.DataSource = tabla;
+            MySqlDataReader mensajes = CapaLogica.ControladorVisitante.ObtenerVisitantes(txtCedula.Text);
+            while (mensajes.Read())
+            {
+
+                dgvVisitantes.DataSource = mensajes;
+                    
+            }
         }
     }
 }

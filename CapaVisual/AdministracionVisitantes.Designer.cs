@@ -35,8 +35,9 @@
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.btnModificarVisitantes = new System.Windows.Forms.Button();
             this.btnEliminarVisitantes = new System.Windows.Forms.Button();
-            this.dgvVisitantes = new System.Windows.Forms.DataGridView();
             this.btnListarVisitantes = new System.Windows.Forms.Button();
+            this.dgvVisitantes = new System.Windows.Forms.DataGridView();
+            this.rtxtVisitantes = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitantes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,14 +103,6 @@
             this.btnEliminarVisitantes.UseVisualStyleBackColor = true;
             this.btnEliminarVisitantes.Click += new System.EventHandler(this.btnEliminarVisitantes_Click);
             // 
-            // dgvVisitantes
-            // 
-            this.dgvVisitantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisitantes.Location = new System.Drawing.Point(221, 24);
-            this.dgvVisitantes.Name = "dgvVisitantes";
-            this.dgvVisitantes.Size = new System.Drawing.Size(271, 184);
-            this.dgvVisitantes.TabIndex = 7;
-            // 
             // btnListarVisitantes
             // 
             this.btnListarVisitantes.Location = new System.Drawing.Point(125, 130);
@@ -120,11 +113,28 @@
             this.btnListarVisitantes.UseVisualStyleBackColor = true;
             this.btnListarVisitantes.Click += new System.EventHandler(this.btnListarVisitantes_Click);
             // 
+            // dgvVisitantes
+            // 
+            this.dgvVisitantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisitantes.Location = new System.Drawing.Point(221, 24);
+            this.dgvVisitantes.Name = "dgvVisitantes";
+            this.dgvVisitantes.Size = new System.Drawing.Size(271, 184);
+            this.dgvVisitantes.TabIndex = 7;
+            // 
+            // rtxtVisitantes
+            // 
+            this.rtxtVisitantes.Location = new System.Drawing.Point(12, 221);
+            this.rtxtVisitantes.Name = "rtxtVisitantes";
+            this.rtxtVisitantes.Size = new System.Drawing.Size(197, 96);
+            this.rtxtVisitantes.TabIndex = 9;
+            this.rtxtVisitantes.Text = "";
+            // 
             // AdministracionVisitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 220);
+            this.ClientSize = new System.Drawing.Size(584, 384);
+            this.Controls.Add(this.rtxtVisitantes);
             this.Controls.Add(this.btnListarVisitantes);
             this.Controls.Add(this.dgvVisitantes);
             this.Controls.Add(this.btnEliminarVisitantes);
@@ -151,8 +161,9 @@
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Button btnModificarVisitantes;
         private System.Windows.Forms.Button btnEliminarVisitantes;
-        private System.Windows.Forms.DataGridView dgvVisitantes;
         private System.Windows.Forms.Button btnListarVisitantes;
+        private System.Windows.Forms.DataGridView dgvVisitantes;
+        private System.Windows.Forms.RichTextBox rtxtVisitantes;
     }
 }
 

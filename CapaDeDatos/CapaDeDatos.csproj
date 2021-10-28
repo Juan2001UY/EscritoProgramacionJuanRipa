@@ -89,6 +89,7 @@
     <Compile Include="ModeloConexionBdd.cs" />
     <Compile Include="ModeloEspacio.cs" />
     <Compile Include="ModeloJaula.cs" />
+    <Compile Include="ModeloLogin.cs" />
     <Compile Include="ModeloVisitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
