@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace CapaDeDatos
 {
@@ -13,11 +14,19 @@ namespace CapaDeDatos
         public string FechaDeCompra;
         public string Producto;
         public string Precio;
+        public string NombreVisitante;
+        
 
 
         private void EjecutarQuery()
         {
             this.Comando.ExecuteNonQuery();
+        }
+
+        public void DarAltaVisitanteDesdeCompra()
+        {
+            AgregarVisitanteDesdeCompra();
+            EjecutarQuery();
         }
 
         public void DarAltaCompra()
@@ -34,6 +43,24 @@ namespace CapaDeDatos
             this.Comando.Parameters.AddWithValue("@producto", this.Producto);
             this.Comando.Parameters.AddWithValue("@precio", this.Precio);
             this.Comando.Prepare();
+        }
+
+        private void AgregarVisitanteDesdeCompra()
+        {
+            this.Comando.CommandText = "INSERT INTO visitantes(Cedula,NombreVisitante) VALUES(@cedula,@nombrevisitante)";
+
+            this.Comando.Parameters.AddWithValue("@cedula", this.CedulaComprador);
+            this.Comando.Parameters.AddWithValue("@nombrevisitante", this.NombreVisitante);
+            this.Comando.Prepare();
+        }
+
+        public MySqlDataReader BuscarVisitanteParaCompra()
+        {
+            this.Comando.CommandText = "SELECT Cedula FROM visitantes WHERE Cedula = @cedula";
+            this.Comando.Parameters.AddWithValue("@cedula", this.CedulaComprador);
+            this.Comando.Prepare();
+            return this.Comando.ExecuteReader();
+
         }
     }
 }

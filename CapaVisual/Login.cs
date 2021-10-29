@@ -21,16 +21,16 @@ namespace CapaVisual
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-                MySqlDataReader usuarios = CapaLogica.ControladorLogin.ObtenerUsuario(txtUsuario.Text, txtContraseña.Text);
-                while (usuarios.Read())
-                {
-                string NombreIngresado = usuarios.GetString(0);
-                string ContraseñaIngresada = usuarios.GetString(1);
+            MySqlDataReader usuarios = CapaLogica.ControladorLogin.ObtenerUsuario(txtUsuario.Text, txtContraseña.Text);
+            if (usuarios.Read())
+            {
+                string Nombre = usuarios.GetString(0);
+                string Contraseña = usuarios.GetString(1);
                 string TipoUsuario = usuarios.GetString(2);
-                if ((NombreIngresado == txtUsuario.Text) && (ContraseñaIngresada == txtContraseña.Text))
+                if ((Nombre == txtUsuario.Text) && (Contraseña == txtContraseña.Text))
                 {
                     if (TipoUsuario == "Admin")
-                   {
+                    {
                         MenuAdministrador frm = new MenuAdministrador();
                         frm.Show();
                         this.Hide();
@@ -42,10 +42,10 @@ namespace CapaVisual
                         this.Hide();
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Nombre de Usuario o Contraseña Incorrectos");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Contraseña incorrecta");
             }
         }
 

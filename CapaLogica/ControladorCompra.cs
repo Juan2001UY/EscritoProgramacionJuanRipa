@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDeDatos;
+using MySql.Data.MySqlClient;
 
 namespace CapaLogica
 {
@@ -20,5 +21,22 @@ namespace CapaLogica
             c.DarAltaCompra();
         }
 
+        public static void AltaVisitanteDesdeCompra(string CedulaComprador, string NombreVisitante)
+        {
+            ModeloCompra c = new ModeloCompra();
+
+            c.CedulaComprador = CedulaComprador;
+            c.NombreVisitante = NombreVisitante;
+
+            c.DarAltaVisitanteDesdeCompra();
+        }
+
+        public static MySqlDataReader ObtenerVisitanteParaCompra(string CedulaComprador)
+        {
+            ModeloCompra c = new ModeloCompra();
+            c.CedulaComprador = CedulaComprador;
+
+            return c.BuscarVisitanteParaCompra();
+        }
     }
 }

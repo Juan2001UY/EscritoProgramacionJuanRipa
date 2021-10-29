@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CapaVisual
 {
@@ -19,10 +20,24 @@ namespace CapaVisual
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            CapaLogica.ControladorCompra.AltaCompra(txtCedulaComprador.Text, LbTickets.GetItemText(LbTickets.SelectedItem), lblMostrarPrecio.Text);
-            MessageBox.Show("Compra Realizada Correctamente");
-            txtCedulaComprador.Text = String.Empty;
-            
+            MySqlDataReader visitante = CapaLogica.ControladorCompra.ObtenerVisitanteParaCompra(txtCedulaComprador.Text);
+            if (visitante.Read())
+            {
+                string Cedula = visitante.GetString(0);
+                if (Cedula == txtCedulaComprador.Text)
+                {
+                    CapaLogica.ControladorCompra.AltaCompra(txtCedulaComprador.Text, LbTickets.GetItemText(LbTickets.SelectedItem), lblMostrarPrecio.Text);
+                    MessageBox.Show("Compra Realizada Correctamente");
+                    txtCedulaComprador.Text = String.Empty;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existe un visitante con esta Cedula, agreguelo para continuar");
+                AgregarVisitanteDesdeCompra frm = new AgregarVisitanteDesdeCompra();
+                frm.Show();
+            }
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

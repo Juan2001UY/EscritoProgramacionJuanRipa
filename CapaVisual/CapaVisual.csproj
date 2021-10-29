@@ -113,6 +113,12 @@
     <Compile Include="AdministracionVisitantes.Designer.cs">
       <DependentUpon>AdministracionVisitantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarVisitanteDesdeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarVisitanteDesdeCompra.Designer.cs">
+      <DependentUpon>AgregarVisitanteDesdeCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdministracionVisitantes.resx">
       <DependentUpon>AdministracionVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarVisitanteDesdeCompra.resx">
+      <DependentUpon>AgregarVisitanteDesdeCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -63,18 +63,7 @@ namespace CapaLogica
 
         }
 
-        //  public static void ModificacionVisitante(string Cedula, string NombreVisitante)
-        // {
-        //    ModeloVisitante v = new ModeloVisitante();
-        //
-        //    v.Cedula = Cedula;
-        //     v.NombreVisitante = NombreVisitante;
-        //
-        //    v.ListarVisitante();
-
-        //    DataTable tabla = new DataTable;
-        //     tabla.Load(v);
-        //}
+       
 
         //public static DataTable Obtener(string Cedula)
         // {
