@@ -49,7 +49,7 @@
             this.dgvAnimales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAnimales.Location = new System.Drawing.Point(313, 12);
             this.dgvAnimales.Name = "dgvAnimales";
-            this.dgvAnimales.Size = new System.Drawing.Size(240, 150);
+            this.dgvAnimales.Size = new System.Drawing.Size(412, 150);
             this.dgvAnimales.TabIndex = 0;
             // 
             // btnGuardarAnimales
@@ -90,6 +90,7 @@
             this.btnlistarAnimales.TabIndex = 4;
             this.btnlistarAnimales.Text = "Listar";
             this.btnlistarAnimales.UseVisualStyleBackColor = true;
+            this.btnlistarAnimales.Click += new System.EventHandler(this.btnlistarAnimales_Click);
             // 
             // lblNombreAnimal
             // 
@@ -159,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 212);
+            this.ClientSize = new System.Drawing.Size(737, 210);
             this.Controls.Add(this.txtDescripcionAnimal);
             this.Controls.Add(this.txtNombreAnimal);
             this.Controls.Add(this.txtIdAnimal);

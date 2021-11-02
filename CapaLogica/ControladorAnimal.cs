@@ -41,46 +41,41 @@ namespace CapaLogica
             a.ModificarAnimal();
         }
 
-        //  public static void ModificacionEspacio(int IdEspacio, string NombreEspacio, string DescripcionEspacio)
-        // {
-        //    ModeloEspacio e = new ModeloEspacio();
-        //
-        //    e.Cedula = Cedula;
-        //    e.NombreEspacio = NombreEspacio;
-        //    e.DescripcionEspacio = DescripcionEspacio;
-        //
-        //    e.ListarEspacio();
-
-        //    DataTable tabla = new DataTable;
-        //     tabla.Load(e);
-        //}
-
         public static DataTable Obtener()
         {
-
             ModeloAnimal a = new ModeloAnimal();
-            List<ModeloAnimal> Animal = new List<ModeloAnimal>();
-
-            a.ListarAnimal();
-            Animal.Add(a);
-
-            return prepararDataTable(Animal);
-        }
-
-
-        public static DataTable prepararDataTable(List<ModeloAnimal> Animales)
-        {
             DataTable tabla = new DataTable();
-            tabla.Columns.Add("IdAnimal");
-            tabla.Columns.Add("NombreAnimal");
-            tabla.Columns.Add("DescripcionAnimal");
-            tabla.Columns.Add("IdJ");
-
-            foreach (ModeloAnimal Animal in Animales)
-                tabla.Rows.Add(Animal.IdAnimal, Animal.NombreAnimal, Animal.DescripcionAnimal, Animal.IdJ);
-
+            tabla.Load(a.ListarAnimal());
             return tabla;
-
         }
+
+
+        // public static DataTable Obtener()
+        //  {
+
+        //   ModeloAnimal a = new ModeloAnimal();
+        //   List<ModeloAnimal> Animal = new List<ModeloAnimal>();
+
+        //   a.ListarAnimal();
+        //   Animal.Add(a);
+
+        //  return prepararDataTable(Animal);
+        //  }
+
+
+        // public static DataTable prepararDataTable(List<ModeloAnimal> Animales)
+        //  {
+        //   DataTable tabla = new DataTable();
+        // tabla.Columns.Add("IdAnimal");
+        //   tabla.Columns.Add("NombreAnimal");
+        //   tabla.Columns.Add("DescripcionAnimal");
+        //  tabla.Columns.Add("IdJ");
+
+        //  foreach (ModeloAnimal Animal in Animales)
+        //     tabla.Rows.Add(Animal.IdAnimal, Animal.NombreAnimal, Animal.DescripcionAnimal, Animal.IdJ);
+
+        // return tabla;
+
+        //}
     }
 }

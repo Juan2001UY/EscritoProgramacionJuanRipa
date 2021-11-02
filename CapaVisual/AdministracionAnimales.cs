@@ -48,5 +48,10 @@ namespace CapaVisual
             txtIdJ.Text = String.Empty;
             txtIdAnimal.Text = String.Empty;
         }
+
+        private void btnlistarAnimales_Click(object sender, EventArgs e)
+        {
+            dgvAnimales.DataSource = CapaLogica.ControladorAnimal.Obtener();
+        }
     }
 }

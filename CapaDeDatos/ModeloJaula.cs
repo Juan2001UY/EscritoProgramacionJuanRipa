@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace CapaDeDatos
 {
@@ -46,10 +47,19 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
         }
-        public void ListarJaula()
+        public MySqlDataReader ListarJaula()
         {
-            this.Comando.CommandText = "SELECT * FROM jaulas";
-            lector = this.Comando.ExecuteReader();
+            this.Comando.CommandText = "SELECT IdJaula, DescripcionJaula, IdUbicacion FROM jaulas WHERE IdJaula > @numero";
+            this.Comando.Parameters.AddWithValue("@numero", 0);
+            this.Comando.Prepare();
+            return this.Comando.ExecuteReader();
+            // this.lector = this.Comando.ExecuteReader();
+
+            // this.lector.Read();
+
+            // this.IdJaula = lector.GetInt32(0);
+            //this.DescripcionJaula = lector.GetString(1);
+            //this.IdUbicacion = lector.GetInt32(2);
 
         }
 

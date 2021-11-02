@@ -47,7 +47,7 @@
             this.dgvJaula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJaula.Location = new System.Drawing.Point(340, 21);
             this.dgvJaula.Name = "dgvJaula";
-            this.dgvJaula.Size = new System.Drawing.Size(240, 150);
+            this.dgvJaula.Size = new System.Drawing.Size(363, 150);
             this.dgvJaula.TabIndex = 0;
             // 
             // btnAltaJaula
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 196);
+            this.ClientSize = new System.Drawing.Size(714, 184);
             this.Controls.Add(this.txtDescripcionJaula);
             this.Controls.Add(this.txtIdUbicacion);
             this.Controls.Add(this.txtIdJaula);

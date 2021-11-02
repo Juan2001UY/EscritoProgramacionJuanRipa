@@ -39,45 +39,40 @@ namespace CapaLogica
             e.ModificarEspacio();
         }
 
-        //  public static void ModificacionEspacio(int IdEspacio, string NombreEspacio, string DescripcionEspacio)
-        // {
-        //    ModeloEspacio e = new ModeloEspacio();
-        //
-        //    e.Cedula = Cedula;
-        //    e.NombreEspacio = NombreEspacio;
-        //    e.DescripcionEspacio = DescripcionEspacio;
-        //
-        //    e.ListarEspacio();
-
-        //    DataTable tabla = new DataTable;
-        //     tabla.Load(e);
-        //}
+      
 
         public static DataTable Obtener()
         {
-
             ModeloEspacio e = new ModeloEspacio();
-            List<ModeloEspacio> Espacio = new List<ModeloEspacio>();
-
-            e.ListarEspacio();
-            Espacio.Add(e);
-
-            return prepararDataTable(Espacio);
-        }
-
-
-        public static DataTable prepararDataTable(List<ModeloEspacio> Espacios)
-        {
             DataTable tabla = new DataTable();
-            tabla.Columns.Add("IdEspacio");
-            tabla.Columns.Add("NombreEspacio");
-            tabla.Columns.Add("DescripcionEspacio");
-
-            foreach (ModeloEspacio Espacio in Espacios)
-                tabla.Rows.Add(Espacio.IdEspacio, Espacio.NombreEspacio, Espacio.DescripcionEspacio);
-
+            tabla.Load(e.ListarEspacio());
             return tabla;
-
         }
+
+        // public static DataTable Obtener()
+        //  {
+
+        //   ModeloEspacio e = new ModeloEspacio();
+        //   List<ModeloEspacio> Espacio = new List<ModeloEspacio>();
+
+        //   e.ListarEspacio();
+        //   Espacio.Add(e);
+
+        //  return prepararDataTable(Espacio);
+        //  }
+
+        //public static DataTable prepararDataTable(List<ModeloEspacio> Espacios)
+        //  {
+        //    DataTable tabla = new DataTable();
+        //    tabla.Columns.Add("IdEspacio");
+        //tabla.Columns.Add("NombreEspacio");
+        //  tabla.Columns.Add("DescripcionEspacio");
+
+        //foreach (ModeloEspacio Espacio in Espacios)
+        //     tabla.Rows.Add(Espacio.IdEspacio, Espacio.NombreEspacio, Espacio.DescripcionEspacio);
+
+        // return tabla;
+
+        // }
     }
 }

@@ -48,13 +48,8 @@ namespace CapaVisual
 
         private void btnListarVisitantes_Click(object sender, EventArgs e)
         {
-            MySqlDataReader mensajes = CapaLogica.ControladorVisitante.ObtenerVisitantes(txtCedula.Text);
-            while (mensajes.Read())
-            {
-
-                dgvVisitantes.DataSource = mensajes;
-                    
-            }
+          
+            dgvVisitantes.DataSource = CapaLogica.ControladorVisitante.Obtener(); ;
         }
     }
 }

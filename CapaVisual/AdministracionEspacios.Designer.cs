@@ -85,9 +85,9 @@
             // dgvEspacio
             // 
             this.dgvEspacio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEspacio.Location = new System.Drawing.Point(336, 12);
+            this.dgvEspacio.Location = new System.Drawing.Point(360, 12);
             this.dgvEspacio.Name = "dgvEspacio";
-            this.dgvEspacio.Size = new System.Drawing.Size(240, 150);
+            this.dgvEspacio.Size = new System.Drawing.Size(352, 150);
             this.dgvEspacio.TabIndex = 4;
             // 
             // lblNombreEspacio
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 192);
+            this.ClientSize = new System.Drawing.Size(723, 184);
             this.Controls.Add(this.txtDescripcionEspacio);
             this.Controls.Add(this.txtIdEspacio);
             this.Controls.Add(this.txtNombreEspacio);

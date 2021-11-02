@@ -47,8 +47,8 @@ namespace CapaVisual
 
         private void btnListarJaula_Click(object sender, EventArgs e)
         {
-            CapaLogica.ControladorJaula.Obtener();
-  //          dgvJaula.DataSource = CapaLogica.ControladorJaula.tabla;
+            
+            dgvJaula.DataSource = CapaLogica.ControladorJaula.Obtener();
 
         }
     }

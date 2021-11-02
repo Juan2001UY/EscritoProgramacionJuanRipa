@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
 
 namespace CapaDeDatos
 {
@@ -52,12 +54,22 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
             }
-            public void ListarAnimal()
+            public MySqlDataReader ListarAnimal()
             {
-                this.Comando.CommandText = "SELECT * FROM animales";
-                lector = this.Comando.ExecuteReader();
+            this.Comando.CommandText = "SELECT IdAnimal, NombreAnimal, DescripcionAnimal, IdJ FROM animales WHERE IdAnimal > @numero";
+            this.Comando.Parameters.AddWithValue("@numero", 0);
+            this.Comando.Prepare();
+            return this.Comando.ExecuteReader();
+           // this.lector = this.Comando.ExecuteReader();
 
-            }
+           // this.lector.Read();
+
+            //this.IdAnimal = lector.GetInt32(0);
+            //this.NombreAnimal = lector.GetString(1);
+           // this.DescripcionAnimal = lector.GetString(2);
+          //  this.IdJ = lector.GetInt32(3);
+
+        }
 
             public void EliminarAnimal(int IdAnimal)
             {

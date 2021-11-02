@@ -40,42 +40,41 @@ namespace CapaLogica
             v.ModificarVisitante();
         }
 
-        public static MySqlDataReader ObtenerVisitantes(string Cedula)
+        public static DataTable Obtener()
         {
             ModeloVisitante v = new ModeloVisitante();
-            v.Cedula = Cedula;
-            
-            return v.Obtener();
-
-        }
-
-        public static DataTable prepararDataTable(List<ModeloVisitante> Visitantes)
-        {
             DataTable tabla = new DataTable();
-            tabla.Columns.Add("Cedula");
-            tabla.Columns.Add("NombreVisitante");
-
-
-            foreach (ModeloVisitante Visitante in Visitantes)
-                tabla.Rows.Add(Visitante.Cedula, Visitante.NombreVisitante);
-
+            tabla.Load(v.ObtenerVisitante());
             return tabla;
-
         }
 
-       
+       // public static DataTable Obtener()
+       // {
+        //    ModeloVisitante v = new ModeloVisitante();
+        //    List<ModeloVisitante> visitante = new List<ModeloVisitante>();
+    
+        //    v.ObtenerVisitante();
+         //   visitante.Add(v);
 
-        //public static DataTable Obtener(string Cedula)
-        // {
-        //
-        //     ModeloVisitante v = new ModeloVisitante();
-        //     List<ModeloVisitante> visitante = new List<ModeloVisitante>();
-        //
-        //      v.Obtener(Cedula);
-        //     visitante.Add(v);
-        //
-        //     return prepararDataTable(visitante);
-        //  }
+         //   return prepararDataTable(visitante);
+       // }
+
+        
+
+       // private static DataTable prepararDataTable(List<ModeloVisitante> Visitantes)
+       // {
+            
+         //   DataTable tabla = new DataTable();
+          //  tabla.Columns.Add("Cedula", typeof(string));
+           // tabla.Columns.Add("NombreVisitante", typeof(string));
+
+
+           // foreach (ModeloVisitante visitante in Visitantes)
+          //  tabla.Rows.Add(visitante.Cedula, visitante.NombreVisitante);
+
+          //  return tabla;
+
+       // }
 
         //  public static DataTable Obtener()
         // {
@@ -100,9 +99,9 @@ namespace CapaLogica
         //   }
         //
         //  }
-       
 
-        
+
+
 
 
     }

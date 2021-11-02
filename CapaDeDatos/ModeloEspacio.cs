@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace CapaDeDatos
 {
@@ -49,10 +50,19 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
         }
-        public void ListarEspacio()
+        public MySqlDataReader ListarEspacio()
         {
-            this.Comando.CommandText = "SELECT * FROM espacios";
-            lector = this.Comando.ExecuteReader();
+            this.Comando.CommandText = "SELECT IdEspacio, NombreEspacio, DescripcionEspacio FROM espacios WHERE IdEspacio > @numero";
+            this.Comando.Parameters.AddWithValue("@numero", 0);
+            this.Comando.Prepare();
+            return this.Comando.ExecuteReader();
+            // this.lector = this.Comando.ExecuteReader();
+
+            // this.lector.Read();
+
+            // this.IdEspacio = lector.GetInt32(0);
+            // this.NombreEspacio = lector.GetString(1);
+            // this.DescripcionEspacio = lector.GetString(2);
 
         }
 
