@@ -94,6 +94,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestControladorAnimal.cs" />
+    <Compile Include="TestControladorCompra.cs" />
+    <Compile Include="TestControladorEspacio.cs" />
+    <Compile Include="TestControladorJaula.cs" />
+    <Compile Include="TestControladorLogin.cs" />
+    <Compile Include="TestControladorVisitante.cs" />
     <Compile Include="TestModeloAnimal.cs" />
     <Compile Include="TestModeloCompra.cs" />
     <Compile Include="TestModeloEspacio.cs" />

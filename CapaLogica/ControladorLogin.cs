@@ -18,7 +18,6 @@ namespace CapaLogica
                 l.Contraseña = Contraseña;
 
                 return l.BuscarUsuario();
-
             }
     }
 }
