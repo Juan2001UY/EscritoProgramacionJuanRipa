@@ -37,12 +37,14 @@
             this.btnEliminarVisitantes = new System.Windows.Forms.Button();
             this.btnListarVisitantes = new System.Windows.Forms.Button();
             this.dgvVisitantes = new System.Windows.Forms.DataGridView();
+            this.lblIdVisitante = new System.Windows.Forms.Label();
+            this.txtIdVisitante = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitantes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardarVisitantes
             // 
-            this.btnGuardarVisitantes.Location = new System.Drawing.Point(15, 89);
+            this.btnGuardarVisitantes.Location = new System.Drawing.Point(15, 114);
             this.btnGuardarVisitantes.Name = "btnGuardarVisitantes";
             this.btnGuardarVisitantes.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarVisitantes.TabIndex = 0;
@@ -84,7 +86,7 @@
             // 
             // btnModificarVisitantes
             // 
-            this.btnModificarVisitantes.Location = new System.Drawing.Point(125, 88);
+            this.btnModificarVisitantes.Location = new System.Drawing.Point(125, 114);
             this.btnModificarVisitantes.Name = "btnModificarVisitantes";
             this.btnModificarVisitantes.Size = new System.Drawing.Size(75, 23);
             this.btnModificarVisitantes.TabIndex = 5;
@@ -94,7 +96,7 @@
             // 
             // btnEliminarVisitantes
             // 
-            this.btnEliminarVisitantes.Location = new System.Drawing.Point(15, 131);
+            this.btnEliminarVisitantes.Location = new System.Drawing.Point(15, 157);
             this.btnEliminarVisitantes.Name = "btnEliminarVisitantes";
             this.btnEliminarVisitantes.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarVisitantes.TabIndex = 6;
@@ -104,7 +106,7 @@
             // 
             // btnListarVisitantes
             // 
-            this.btnListarVisitantes.Location = new System.Drawing.Point(125, 130);
+            this.btnListarVisitantes.Location = new System.Drawing.Point(125, 157);
             this.btnListarVisitantes.Name = "btnListarVisitantes";
             this.btnListarVisitantes.Size = new System.Drawing.Size(75, 23);
             this.btnListarVisitantes.TabIndex = 8;
@@ -120,11 +122,29 @@
             this.dgvVisitantes.Size = new System.Drawing.Size(271, 184);
             this.dgvVisitantes.TabIndex = 7;
             // 
+            // lblIdVisitante
+            // 
+            this.lblIdVisitante.AutoSize = true;
+            this.lblIdVisitante.Location = new System.Drawing.Point(15, 82);
+            this.lblIdVisitante.Name = "lblIdVisitante";
+            this.lblIdVisitante.Size = new System.Drawing.Size(79, 13);
+            this.lblIdVisitante.TabIndex = 9;
+            this.lblIdVisitante.Text = "Id del Visitante:";
+            // 
+            // txtIdVisitante
+            // 
+            this.txtIdVisitante.Location = new System.Drawing.Point(101, 82);
+            this.txtIdVisitante.Name = "txtIdVisitante";
+            this.txtIdVisitante.Size = new System.Drawing.Size(100, 20);
+            this.txtIdVisitante.TabIndex = 10;
+            // 
             // AdministracionVisitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 214);
+            this.Controls.Add(this.txtIdVisitante);
+            this.Controls.Add(this.lblIdVisitante);
             this.Controls.Add(this.btnListarVisitantes);
             this.Controls.Add(this.dgvVisitantes);
             this.Controls.Add(this.btnEliminarVisitantes);
@@ -153,6 +173,8 @@
         private System.Windows.Forms.Button btnEliminarVisitantes;
         private System.Windows.Forms.Button btnListarVisitantes;
         private System.Windows.Forms.DataGridView dgvVisitantes;
+        private System.Windows.Forms.Label lblIdVisitante;
+        private System.Windows.Forms.TextBox txtIdVisitante;
     }
 }
 

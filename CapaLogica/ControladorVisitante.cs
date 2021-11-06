@@ -22,20 +22,21 @@ namespace CapaLogica
             v.DarAltaVisitante();
         }
 
-        public static void BajaVisitante(string Cedula)
+        public static void BajaVisitante(int IdVisitante)
         {
             ModeloVisitante v = new ModeloVisitante();
-            v.Cedula = Cedula;
+            v.IdVisitante = IdVisitante;
             v.DarBajaVisitante();
 
         }
 
-        public static void ModificarVisitante(string NombreVisitante, string Cedula)
+        public static void ModificarVisitante(string Cedula, string NombreVisitante, int IdVisitante)
         {
             ModeloVisitante v = new ModeloVisitante();
 
-            v.NombreVisitante = NombreVisitante;
             v.Cedula = Cedula;
+            v.NombreVisitante = NombreVisitante;
+            v.IdVisitante = IdVisitante;
            
             v.ModificarVisitante();
         }

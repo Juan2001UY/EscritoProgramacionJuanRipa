@@ -9,7 +9,7 @@ namespace CapaDeDatos
 {
     public class ModeloVisitante : ModeloConexionBdd
     {
-
+        public int IdVisitante;
         public string Cedula;
         public string NombreVisitante;
 
@@ -67,7 +67,7 @@ namespace CapaDeDatos
 
         public MySqlDataReader ObtenerVisitante()
         {
-            this.Comando.CommandText = "SELECT Cedula, NombreVisitante FROM visitantes WHERE IdVisitante > @numero";
+            this.Comando.CommandText = "SELECT IdVisitante, Cedula, NombreVisitante FROM visitantes WHERE IdVisitante > @numero";
             this.Comando.Parameters.AddWithValue("@numero", 0);
             this.Comando.Prepare();
             return this.Comando.ExecuteReader();
@@ -84,17 +84,18 @@ namespace CapaDeDatos
         public void EliminarVisitante(string Cedula) {
 
 
-             this.Comando.CommandText = "DELETE FROM visitantes WHERE Cedula = @CedulaAEliminar";
-             this.Comando.Parameters.AddWithValue("@CedulaAEliminar", this.Cedula);
+             this.Comando.CommandText = "DELETE FROM visitantes WHERE IdVisitante = @IdAEliminar";
+             this.Comando.Parameters.AddWithValue("@IdAEliminar", this.IdVisitante);
              this.Comando.Prepare();
         }
 
 
         public void CambiarVisitante()
         {
-             this.Comando.CommandText = "UPDATE visitantes SET NombreVisitante = @nombrevisitante WHERE Cedula = @CedulaAModificar";
+             this.Comando.CommandText = "UPDATE visitantes SET Cedula = @cedula, NombreVisitante = @nombrevisitante WHERE IdVisitante = @IdAModificar";
+             this.Comando.Parameters.AddWithValue("@cedula", this.Cedula);
              this.Comando.Parameters.AddWithValue("@nombrevisitante", this.NombreVisitante);
-             this.Comando.Parameters.AddWithValue("@CedulaAModificar", this.Cedula);
+             this.Comando.Parameters.AddWithValue("@IdAModificar", this.IdVisitante);
              this.Comando.Prepare();
 
         }

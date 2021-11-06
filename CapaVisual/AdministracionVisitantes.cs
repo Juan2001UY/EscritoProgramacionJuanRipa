@@ -27,23 +27,26 @@ namespace CapaVisual
             MessageBox.Show("Agregado Correctamente");
             txtCedula.Text = String.Empty;
             txtNombre.Text = String.Empty;
+            txtIdVisitante.Text = String.Empty;
 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            CapaLogica.ControladorVisitante.ModificarVisitante(txtNombre.Text, txtCedula.Text);
+            CapaLogica.ControladorVisitante.ModificarVisitante(txtCedula.Text, txtNombre.Text, Int32.Parse(txtIdVisitante.Text));
             MessageBox.Show("Modificado Correctamente");
             txtCedula.Text = String.Empty;
             txtNombre.Text = String.Empty;
+            txtIdVisitante.Text = String.Empty;
         }
 
         private void btnEliminarVisitantes_Click(object sender, EventArgs e)
         {
-            CapaLogica.ControladorVisitante.BajaVisitante(txtCedula.Text);
+            CapaLogica.ControladorVisitante.BajaVisitante(Int32.Parse(txtIdVisitante.Text));
             MessageBox.Show("Eliminado Correctamente");
             txtCedula.Text = String.Empty;
             txtNombre.Text = String.Empty;
+            txtIdVisitante.Text = String.Empty;
         }
 
         private void btnListarVisitantes_Click(object sender, EventArgs e)

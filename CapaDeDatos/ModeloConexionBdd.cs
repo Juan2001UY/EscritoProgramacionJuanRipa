@@ -13,7 +13,7 @@ namespace CapaDeDatos
         protected string UsuarioBaseDeDatos;
         protected string PasswordDeDatos;
         protected string NombreBaseDeDatos;
-        protected MySqlConnection Conexion;
+        public MySqlConnection Conexion;
         protected MySqlCommand Comando;
         protected MySqlDataReader lector;
 
@@ -33,7 +33,7 @@ namespace CapaDeDatos
             this.Comando.Connection = this.Conexion;
         }
 
-        private void InicializarConexión()
+        public void InicializarConexión()
         {
             this.IpBaseDeDatos = "localhost";
             this.UsuarioBaseDeDatos = "root";
