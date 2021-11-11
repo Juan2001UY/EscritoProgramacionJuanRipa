@@ -62,7 +62,7 @@ namespace CapaLogica
             }
         } 
 
-        public static DataTable Obtener()
+        public static DataTable ListarTodoVisitante()
         {
             ModeloVisitante v = new ModeloVisitante();
             DataTable tabla = new DataTable();

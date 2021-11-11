@@ -52,7 +52,7 @@ namespace CapaVisual
         private void btnListarVisitantes_Click(object sender, EventArgs e)
         {
           
-            dgvVisitantes.DataSource = CapaLogica.ControladorVisitante.Obtener(); ;
+            dgvVisitantes.DataSource = CapaLogica.ControladorVisitante.ListarTodoVisitante(); ;
         }
     }
 }

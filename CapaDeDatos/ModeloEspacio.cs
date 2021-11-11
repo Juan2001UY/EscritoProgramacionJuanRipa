@@ -39,8 +39,6 @@ namespace CapaDeDatos
             EjecutarQuery();
         }
 
-
-
         private void AgregarEspacio()
         {
             this.Comando.CommandText = "INSERT INTO espacios(NombreEspacio,DescripcionEspacio) VALUES(@nombreespacio,@descripcionespacio)";
@@ -50,7 +48,7 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
         }
-        public MySqlDataReader ListarEspacio()
+        public MySqlDataReader ObtenerEspacio()
         {
             this.Comando.CommandText = "SELECT IdEspacio, NombreEspacio, DescripcionEspacio FROM espacios WHERE IdEspacio > @numero";
             this.Comando.Parameters.AddWithValue("@numero", 0);

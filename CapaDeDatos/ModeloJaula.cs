@@ -36,8 +36,6 @@ namespace CapaDeDatos
             EjecutarQuery();
         }
 
-
-
         private void AgregarJaula()
         {
             this.Comando.CommandText = "INSERT INTO jaulas(DescripcionJaula, IdUbicacion ) VALUES(@descripcionjaula, @idubicacion)";
@@ -47,7 +45,7 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
         }
-        public MySqlDataReader ListarJaula()
+        public MySqlDataReader ObtenerJaula()
         {
             this.Comando.CommandText = "SELECT IdJaula, DescripcionJaula, IdUbicacion FROM jaulas WHERE IdJaula > @numero";
             this.Comando.Parameters.AddWithValue("@numero", 0);

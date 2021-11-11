@@ -53,11 +53,11 @@ namespace CapaLogica
 
       
 
-        public static DataTable Obtener()
+        public static DataTable ListarTodoEspacio()
         {
             ModeloEspacio e = new ModeloEspacio();
             DataTable tabla = new DataTable();
-            tabla.Load(e.ListarEspacio());
+            tabla.Load(e.ObtenerEspacio());
             return tabla;
         }
     }

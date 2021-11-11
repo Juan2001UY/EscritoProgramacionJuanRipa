@@ -51,8 +51,6 @@ namespace CapaDeDatos
 
         }
 
-
-
         public MySqlDataReader ObtenerVisitante()
         {
             this.Comando.CommandText = "SELECT IdVisitante, Cedula, NombreVisitante FROM visitantes WHERE IdVisitante > @numero";

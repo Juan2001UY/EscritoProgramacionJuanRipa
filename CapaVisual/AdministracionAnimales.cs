@@ -51,7 +51,7 @@ namespace CapaVisual
 
         private void btnlistarAnimales_Click(object sender, EventArgs e)
         {
-            dgvAnimales.DataSource = CapaLogica.ControladorAnimal.Obtener();
+            dgvAnimales.DataSource = CapaLogica.ControladorAnimal.ListarTodoAnimal();
         }
     }
 }

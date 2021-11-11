@@ -47,7 +47,7 @@ namespace CapaVisual
 
         private void btnListarEspacio_Click(object sender, EventArgs e)
         {
-            dgvEspacio.DataSource = CapaLogica.ControladorEspacio.Obtener();;
+            dgvEspacio.DataSource = CapaLogica.ControladorEspacio.ListarTodoEspacio();;
         }
     }
 }

@@ -65,11 +65,11 @@ namespace CapaLogica
             }
         }
 
-        public static DataTable Obtener()
+        public static DataTable ListarTodoAnimal()
         {
             ModeloAnimal a = new ModeloAnimal();
             DataTable tabla = new DataTable();
-            tabla.Load(a.ListarAnimal());
+            tabla.Load(a.ObtenerAnimal());
             return tabla;
         }
     }

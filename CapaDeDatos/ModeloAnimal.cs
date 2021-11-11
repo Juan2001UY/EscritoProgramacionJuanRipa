@@ -16,9 +16,6 @@ namespace CapaDeDatos
             public string DescripcionAnimal;
             public int IdJ;
 
-
-
-
             private void EjecutarQuery()
             {
                 this.Comando.ExecuteNonQuery();
@@ -42,8 +39,6 @@ namespace CapaDeDatos
                 EjecutarQuery();
             }
 
-
-
             private void AgregarAnimal()
             {
                 this.Comando.CommandText = "INSERT INTO animales(NombreAnimal,DescripcionAnimal, IdJ) VALUES(@nombreanimal,@descripcionanimal, @idj)";
@@ -54,7 +49,7 @@ namespace CapaDeDatos
             this.Comando.Prepare();
 
             }
-            public MySqlDataReader ListarAnimal()
+            public MySqlDataReader ObtenerAnimal()
             {
             this.Comando.CommandText = "SELECT IdAnimal, NombreAnimal, DescripcionAnimal, IdJ FROM animales WHERE IdAnimal > @numero";
             this.Comando.Parameters.AddWithValue("@numero", 0);

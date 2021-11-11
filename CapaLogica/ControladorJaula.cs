@@ -73,11 +73,11 @@ namespace CapaLogica
             }
         }
 
-        public static DataTable Obtener()
+        public static DataTable ListarTodoJaula()
         {
             ModeloJaula j = new ModeloJaula();
             DataTable tabla = new DataTable();
-            tabla.Load(j.ListarJaula());
+            tabla.Load(j.ObtenerJaula());
             return tabla;
         }
     }
