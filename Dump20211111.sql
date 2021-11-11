@@ -32,7 +32,7 @@ CREATE TABLE `animales` (
   PRIMARY KEY (`IdAnimal`),
   KEY `IdJ` (`IdJ`),
   CONSTRAINT `animales_ibfk_1` FOREIGN KEY (`IdJ`) REFERENCES `jaulas` (`IdJaula`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `animales` (
 
 LOCK TABLES `animales` WRITE;
 /*!40000 ALTER TABLE `animales` DISABLE KEYS */;
-INSERT INTO `animales` VALUES (1,4,'Pinguino','Nefasto'),(2,3,'asdas','asdasd'),(5,4,'q','q');
+INSERT INTO `animales` VALUES (1,4,'Penguin','SuperNefasto'),(2,3,'asdas','asdasd'),(6,3,'Perro','rope');
 /*!40000 ALTER TABLE `animales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,10 +58,8 @@ CREATE TABLE `compras` (
   `FechaDeCompra` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Producto` varchar(20) NOT NULL,
   `Precio` varchar(4) NOT NULL,
-  PRIMARY KEY (`IdCompra`),
-  KEY `CedulaComprador` (`CedulaComprador`),
-  CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`CedulaComprador`) REFERENCES `visitantes` (`Cedula`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`IdCompra`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +68,6 @@ CREATE TABLE `compras` (
 
 LOCK TABLES `compras` WRITE;
 /*!40000 ALTER TABLE `compras` DISABLE KEYS */;
-INSERT INTO `compras` VALUES (1,'112233','2021-10-31 21:36:15','6 Espacios','50$'),(2,'778899','2021-10-31 21:36:36','Todos los Espacios','250$');
 /*!40000 ALTER TABLE `compras` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +83,7 @@ CREATE TABLE `espacios` (
   `NombreEspacio` varchar(20) NOT NULL,
   `DescripcionEspacio` varchar(60) NOT NULL,
   PRIMARY KEY (`IdEspacio`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +92,7 @@ CREATE TABLE `espacios` (
 
 LOCK TABLES `espacios` WRITE;
 /*!40000 ALTER TABLE `espacios` DISABLE KEYS */;
-INSERT INTO `espacios` VALUES (2,'aaaaaaaaa','ddddd'),(3,'asdasd','fegtttt');
+INSERT INTO `espacios` VALUES (2,'sdsadasd','fvdvdfv'),(4,'Junglaaaa','sgfdsfdsdsfaaaa'),(5,'scasc','fsada');
 /*!40000 ALTER TABLE `espacios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -113,7 +110,7 @@ CREATE TABLE `jaulas` (
   PRIMARY KEY (`IdJaula`),
   KEY `IdUbicacion` (`IdUbicacion`),
   CONSTRAINT `jaulas_ibfk_1` FOREIGN KEY (`IdUbicacion`) REFERENCES `espacios` (`IdEspacio`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +119,7 @@ CREATE TABLE `jaulas` (
 
 LOCK TABLES `jaulas` WRITE;
 /*!40000 ALTER TABLE `jaulas` DISABLE KEYS */;
-INSERT INTO `jaulas` VALUES (3,'aaaaaa',2),(4,'wwwrr',2);
+INSERT INTO `jaulas` VALUES (3,'bbbbbb',4),(4,'wwwrr',2);
 /*!40000 ALTER TABLE `jaulas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,7 +161,7 @@ CREATE TABLE `visitantes` (
   `NombreVisitante` varchar(20) NOT NULL,
   PRIMARY KEY (`IdVisitante`),
   UNIQUE KEY `Cedula` (`Cedula`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,7 +170,7 @@ CREATE TABLE `visitantes` (
 
 LOCK TABLES `visitantes` WRITE;
 /*!40000 ALTER TABLE `visitantes` DISABLE KEYS */;
-INSERT INTO `visitantes` VALUES (2,'112233','asd'),(3,'445566','wert'),(4,'778899','Pedro'),(6,'55001764','');
+INSERT INTO `visitantes` VALUES (3,'445566','wert'),(4,'778899','Pedro'),(12,'1144888','Pedro'),(14,'33333','Jorgepp'),(15,'669911','Joseeeee');
 /*!40000 ALTER TABLE `visitantes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -186,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-04 19:05:03
+-- Dump completed on 2021-11-11 14:09:04
