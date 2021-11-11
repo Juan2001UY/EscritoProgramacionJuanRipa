@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDeDatos;
 using System.Data;
+using MySql.Data.MySqlClient;
+
 
 namespace CapaLogica
 {
@@ -12,13 +14,24 @@ namespace CapaLogica
     {
         public static void AltaAnimal(string NombreAnimal, string DescripcionAnimal, int Idj)
         {
-            ModeloAnimal a = new ModeloAnimal();
+            try
+            {
+                ModeloAnimal a = new ModeloAnimal();
 
-            a.NombreAnimal = NombreAnimal;
-            a.DescripcionAnimal = DescripcionAnimal;
-            a.IdJ = Idj;
+                a.NombreAnimal = NombreAnimal;
+                a.DescripcionAnimal = DescripcionAnimal;
+                a.IdJ = Idj;
 
-            a.DarAltaAnimal();
+                a.DarAltaAnimal();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ErrorCode + " - " + ex.Message);
+                if (ex.ErrorCode == -2147467259)
+                    throw new Exception("NoExisteUnaJaulaConEseId");
+                else
+                    throw new Exception("ErroDesconocido");
+            }
         }
 
         public static void BajaAnimal(int IdAnimal)
@@ -31,14 +44,25 @@ namespace CapaLogica
 
         public static void ModificarAnimal(int IdJ, string NombreAnimal, string DescripcionAnimal,  int IdAnimal)
         {
-            ModeloAnimal a = new ModeloAnimal();
+            try
+            {
+                ModeloAnimal a = new ModeloAnimal();
 
-            a.IdJ = IdJ;
-            a.NombreAnimal = NombreAnimal;
-            a.DescripcionAnimal = DescripcionAnimal;
-            a.IdAnimal = IdAnimal;
+                a.IdJ = IdJ;
+                a.NombreAnimal = NombreAnimal;
+                a.DescripcionAnimal = DescripcionAnimal;
+                a.IdAnimal = IdAnimal;
 
-            a.ModificarAnimal();
+                a.ModificarAnimal();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ErrorCode + " - " + ex.Message);
+                if (ex.ErrorCode == -2147467259)
+                    throw new Exception("NoExisteUnaJaulaConEseId");
+                else
+                    throw new Exception("ErroDesconocido");
+            }
         }
 
         public static DataTable Obtener()

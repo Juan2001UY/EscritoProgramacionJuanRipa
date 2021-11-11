@@ -18,19 +18,7 @@ namespace CapaDeDatos
 
         private void EjecutarQuery()
         {
-            try
-            {
-                this.Comando.ExecuteNonQuery();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine(ex.SqlState + " - " + ex.Message);
-                if (ex.ErrorCode == -2147467259)
-                    throw new Exception("YaExisteUnVisitanteConEsaCedula");
-                else
-                    throw new Exception("ErroDesconocido");
-
-            }
+          this.Comando.ExecuteNonQuery();
         }
 
         public void DarAltaVisitante()

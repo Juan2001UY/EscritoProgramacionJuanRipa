@@ -14,12 +14,23 @@ namespace CapaLogica
     {
         public static void AltaVisitante(string Cedula, string NombreVisitante)
         {
-            ModeloVisitante v = new ModeloVisitante();
+            try
+            {
+                ModeloVisitante v = new ModeloVisitante();
 
-            v.Cedula = Cedula;
-            v.NombreVisitante = NombreVisitante;
+                v.Cedula = Cedula;
+                v.NombreVisitante = NombreVisitante;
 
-            v.DarAltaVisitante();
+                v.DarAltaVisitante();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ErrorCode + " - " + ex.Message);
+                if (ex.ErrorCode == -2147467259)
+                    throw new Exception("YaExisteUnVisitanteConEsaCedula");
+                else
+                    throw new Exception("ErroDesconocido");
+            }
         }
 
         public static void BajaVisitante(int IdVisitante)
@@ -27,19 +38,29 @@ namespace CapaLogica
             ModeloVisitante v = new ModeloVisitante();
             v.IdVisitante = IdVisitante;
             v.DarBajaVisitante();
-
         }
 
         public static void ModificarVisitante(string Cedula, string NombreVisitante, int IdVisitante)
         {
-            ModeloVisitante v = new ModeloVisitante();
+            try
+            {
+                ModeloVisitante v = new ModeloVisitante();
 
-            v.Cedula = Cedula;
-            v.NombreVisitante = NombreVisitante;
-            v.IdVisitante = IdVisitante;
-           
-            v.ModificarVisitante();
-        }
+                v.Cedula = Cedula;
+                v.NombreVisitante = NombreVisitante;
+                v.IdVisitante = IdVisitante;
+
+                v.ModificarVisitante();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ErrorCode + " - " + ex.Message);
+                if (ex.ErrorCode == -2147467259)
+                    throw new Exception("YaExisteUnVisitanteConEsaCedula");
+                else
+                    throw new Exception("ErroDesconocido");
+            }
+        } 
 
         public static DataTable Obtener()
         {
@@ -67,8 +88,6 @@ namespace CapaLogica
         //         throw new Exception("AccesoNegado");
         //        else
         //            throw new Exception("ErroDesconocido");
-        //
-        //
         //   }
         //
         //  }

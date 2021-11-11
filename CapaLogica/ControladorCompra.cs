@@ -23,12 +23,23 @@ namespace CapaLogica
 
         public static void AltaVisitanteDesdeCompra(string CedulaComprador, string NombreVisitante)
         {
-            ModeloCompra c = new ModeloCompra();
+            try
+            {
+                ModeloCompra c = new ModeloCompra();
 
-            c.CedulaComprador = CedulaComprador;
-            c.NombreVisitante = NombreVisitante;
+                c.CedulaComprador = CedulaComprador;
+                c.NombreVisitante = NombreVisitante;
 
-            c.DarAltaVisitanteDesdeCompra();
+                c.DarAltaVisitanteDesdeCompra();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ErrorCode + " - " + ex.Message);
+                if (ex.ErrorCode == -2147467259)
+                    throw new Exception("YaExisteUnVisitanteConEsaCedula");
+                else
+                    throw new Exception("ErroDesconocido");
+            }
         }
 
         public static MySqlDataReader ObtenerVisitanteParaCompra(string CedulaComprador)

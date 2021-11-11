@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDeDatos;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace CapaLogica
 {
@@ -22,9 +23,20 @@ namespace CapaLogica
 
         public static void BajaEspacio(int IdEspacio)
         {
-            ModeloEspacio e = new ModeloEspacio();
-            e.IdEspacio = IdEspacio;
-            e.DarBajaEspacio();
+            try
+            {
+                ModeloEspacio e = new ModeloEspacio();
+                e.IdEspacio = IdEspacio;
+                e.DarBajaEspacio();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex.ErrorCode + " - " + ex.Message);
+                if (ex.ErrorCode == -2147467259)
+                    throw new Exception("ExistenJaulasEnEsteEspacio");
+                else
+                    throw new Exception("ErroDesconocido");
+            }
 
         }
 
