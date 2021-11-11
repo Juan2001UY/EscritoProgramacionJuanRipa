@@ -24,9 +24,6 @@ namespace CapaDeDatos
             this.Comando.Parameters.AddWithValue("@contraseña", this.Contraseña);
             this.Comando.Prepare();
             return this.Comando.ExecuteReader();
-
-           
-
         }
     }
 }

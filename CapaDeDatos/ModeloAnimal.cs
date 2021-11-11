@@ -60,15 +60,6 @@ namespace CapaDeDatos
             this.Comando.Parameters.AddWithValue("@numero", 0);
             this.Comando.Prepare();
             return this.Comando.ExecuteReader();
-           // this.lector = this.Comando.ExecuteReader();
-
-           // this.lector.Read();
-
-            //this.IdAnimal = lector.GetInt32(0);
-            //this.NombreAnimal = lector.GetString(1);
-           // this.DescripcionAnimal = lector.GetString(2);
-          //  this.IdJ = lector.GetInt32(3);
-
         }
 
             public void EliminarAnimal(int IdAnimal)

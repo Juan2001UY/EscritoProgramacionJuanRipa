@@ -71,13 +71,6 @@ namespace CapaDeDatos
             this.Comando.Parameters.AddWithValue("@numero", 0);
             this.Comando.Prepare();
             return this.Comando.ExecuteReader();
-            //  this.lector = this.Comando.ExecuteReader();
-
-            //  this.lector.Read();
-
-            //  this.Cedula = lector.GetString(0);
-            // this.NombreVisitante = lector.GetString(1);
-
         }
     
 
@@ -97,7 +90,6 @@ namespace CapaDeDatos
              this.Comando.Parameters.AddWithValue("@nombrevisitante", this.NombreVisitante);
              this.Comando.Parameters.AddWithValue("@IdAModificar", this.IdVisitante);
              this.Comando.Prepare();
-
         }
 
         }

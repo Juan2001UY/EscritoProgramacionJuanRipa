@@ -47,31 +47,5 @@ namespace CapaLogica
             tabla.Load(j.ListarJaula());
             return tabla;
         }
-
-        //  public static DataTable Obtener()
-        // {
-
-        //    ModeloJaula j = new ModeloJaula();
-        //    List<ModeloJaula> Jaula = new List<ModeloJaula>();
-
-        //    j.ListarJaula();
-        //   Jaula.Add(j);
-
-        //  return prepararDataTable(Jaula);
-        // }
-
-
-        //public static DataTable prepararDataTable(List<ModeloJaula> Jaulas)
-        // {
-        //    DataTable tabla = new DataTable();
-        //  tabla.Columns.Add("IdJaula");
-        //  tabla.Columns.Add("DescripcionJaula");
-        //  tabla.Columns.Add("IdUbicacion");
-
-        //  foreach (ModeloJaula Jaula in Jaulas)
-        //      tabla.Rows.Add(Jaula.IdJaula, Jaula.DescripcionJaula, Jaula.IdUbicacion);
-
-        // return tabla;
-        //  }
     }
 }

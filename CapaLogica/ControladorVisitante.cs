@@ -49,34 +49,6 @@ namespace CapaLogica
             return tabla;
         }
 
-       // public static DataTable Obtener()
-       // {
-        //    ModeloVisitante v = new ModeloVisitante();
-        //    List<ModeloVisitante> visitante = new List<ModeloVisitante>();
-    
-        //    v.ObtenerVisitante();
-         //   visitante.Add(v);
-
-         //   return prepararDataTable(visitante);
-       // }
-
-        
-
-       // private static DataTable prepararDataTable(List<ModeloVisitante> Visitantes)
-       // {
-            
-         //   DataTable tabla = new DataTable();
-          //  tabla.Columns.Add("Cedula", typeof(string));
-           // tabla.Columns.Add("NombreVisitante", typeof(string));
-
-
-           // foreach (ModeloVisitante visitante in Visitantes)
-          //  tabla.Rows.Add(visitante.Cedula, visitante.NombreVisitante);
-
-          //  return tabla;
-
-       // }
-
         //  public static DataTable Obtener()
         // {
         //    try

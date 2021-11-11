@@ -53,14 +53,6 @@ namespace CapaDeDatos
             this.Comando.Parameters.AddWithValue("@numero", 0);
             this.Comando.Prepare();
             return this.Comando.ExecuteReader();
-            // this.lector = this.Comando.ExecuteReader();
-
-            // this.lector.Read();
-
-            // this.IdJaula = lector.GetInt32(0);
-            //this.DescripcionJaula = lector.GetString(1);
-            //this.IdUbicacion = lector.GetInt32(2);
-
         }
 
         public void EliminarJaula(int IdEspacio)

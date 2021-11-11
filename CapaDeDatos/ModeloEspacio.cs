@@ -56,14 +56,6 @@ namespace CapaDeDatos
             this.Comando.Parameters.AddWithValue("@numero", 0);
             this.Comando.Prepare();
             return this.Comando.ExecuteReader();
-            // this.lector = this.Comando.ExecuteReader();
-
-            // this.lector.Read();
-
-            // this.IdEspacio = lector.GetInt32(0);
-            // this.NombreEspacio = lector.GetString(1);
-            // this.DescripcionEspacio = lector.GetString(2);
-
         }
 
         public void EliminarEspacio(int IdEspacio)

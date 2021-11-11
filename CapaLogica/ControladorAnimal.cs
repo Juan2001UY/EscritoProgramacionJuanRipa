@@ -48,34 +48,5 @@ namespace CapaLogica
             tabla.Load(a.ListarAnimal());
             return tabla;
         }
-
-
-        // public static DataTable Obtener()
-        //  {
-
-        //   ModeloAnimal a = new ModeloAnimal();
-        //   List<ModeloAnimal> Animal = new List<ModeloAnimal>();
-
-        //   a.ListarAnimal();
-        //   Animal.Add(a);
-
-        //  return prepararDataTable(Animal);
-        //  }
-
-
-        // public static DataTable prepararDataTable(List<ModeloAnimal> Animales)
-        //  {
-        //   DataTable tabla = new DataTable();
-        // tabla.Columns.Add("IdAnimal");
-        //   tabla.Columns.Add("NombreAnimal");
-        //   tabla.Columns.Add("DescripcionAnimal");
-        //  tabla.Columns.Add("IdJ");
-
-        //  foreach (ModeloAnimal Animal in Animales)
-        //     tabla.Rows.Add(Animal.IdAnimal, Animal.NombreAnimal, Animal.DescripcionAnimal, Animal.IdJ);
-
-        // return tabla;
-
-        //}
     }
 }
