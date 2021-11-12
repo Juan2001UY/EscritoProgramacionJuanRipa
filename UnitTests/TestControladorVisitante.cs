@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CapaLogica;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace UnitTests
 {
@@ -57,8 +58,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorVisitante.Obtener();
-                Assert.IsNotNull(tabla);
+                Assert.IsNotNull(CapaLogica.ControladorVisitante.ListarTodoVisitante());
             }
             catch
             {

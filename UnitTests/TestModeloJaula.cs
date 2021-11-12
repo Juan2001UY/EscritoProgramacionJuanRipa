@@ -70,7 +70,7 @@ namespace UnitTests
             {
                 ModeloJaula j = new ModeloJaula();
 
-                j.ListarJaula();
+                j.ObtenerJaula();
 
                 Assert.IsTrue(true);
             }

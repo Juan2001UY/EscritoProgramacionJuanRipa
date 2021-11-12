@@ -70,7 +70,7 @@ namespace UnitTests
             {
                 ModeloEspacio e = new ModeloEspacio();
 
-                e.ListarEspacio();
+                e.ObtenerEspacio();
 
                 Assert.IsTrue(true);
             }

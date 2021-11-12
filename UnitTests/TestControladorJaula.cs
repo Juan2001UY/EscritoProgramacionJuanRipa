@@ -57,8 +57,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorJaula.Obtener();
-                Assert.IsNotNull(tabla);
+                Assert.IsNotNull(CapaLogica.ControladorJaula.ListarTodoJaula());
             }
             catch
             {

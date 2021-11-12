@@ -72,7 +72,7 @@ namespace UnitTests
             {
                 ModeloAnimal a = new ModeloAnimal();
 
-                a.ListarAnimal();
+                a.ObtenerAnimal();
 
                 Assert.IsTrue(true);
             }

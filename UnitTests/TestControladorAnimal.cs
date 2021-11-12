@@ -57,8 +57,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorEspacio.Obtener();
-                Assert.IsNotNull(tabla);
+                Assert.IsNotNull(CapaLogica.ControladorAnimal.ListarTodoAnimal());
             }
             catch
             {
