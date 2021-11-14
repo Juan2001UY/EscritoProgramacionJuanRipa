@@ -15,7 +15,7 @@ namespace UnitTests
             {
                 ModeloEspacio e = new ModeloEspacio();
                 e.NombreEspacio = "Jungla";
-                e.DescripcionEspacio = "sgfdsfdsdsf";
+                e.DescripcionEspacio = "vegetación muy abundante y espesa";
                 e.DarAltaEspacio();
 
                 Assert.IsTrue(true);
@@ -33,7 +33,7 @@ namespace UnitTests
             try
             {
                 ModeloEspacio e = new ModeloEspacio();
-                e.IdEspacio = 3;
+                e.IdEspacio = 4;
                 e.DarBajaEspacio();
                 Assert.IsTrue(true);
             }
@@ -49,9 +49,9 @@ namespace UnitTests
             try
             {
                 ModeloEspacio e = new ModeloEspacio();
-                e.IdEspacio = 4;
-                e.NombreEspacio = "Junglaaaa";
-                e.DescripcionEspacio = "sgfdsfdsdsfaaaa";
+                e.IdEspacio = 1;
+                e.NombreEspacio = "Polo Sur";
+                e.DescripcionEspacio = "Frio";
                 e.ModificarEspacio();
 
                 Assert.IsTrue(true);

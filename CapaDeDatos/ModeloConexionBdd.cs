@@ -38,7 +38,7 @@ namespace CapaDeDatos
             this.IpBaseDeDatos = "localhost";
             this.UsuarioBaseDeDatos = "root";
             this.PasswordDeDatos = "Juan2001";
-            this.NombreBaseDeDatos = "baseprog";
+            this.NombreBaseDeDatos = "escritoprogramacion";
         }
     }
 }

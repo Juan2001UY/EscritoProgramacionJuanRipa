@@ -13,7 +13,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorVisitante.AltaVisitante("Juan", "1234");
+                CapaLogica.ControladorLogin.ObtenerUsuario("Juan", "1234");
                 Assert.IsTrue(true);
             }
             catch

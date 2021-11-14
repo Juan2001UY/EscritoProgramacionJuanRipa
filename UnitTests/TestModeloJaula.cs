@@ -14,7 +14,7 @@ namespace UnitTests
             try
             {
                 ModeloJaula j = new ModeloJaula();
-                j.DescripcionJaula = "sgfdsfdsdsf";
+                j.DescripcionJaula = "10 * 10";
                 j.IdUbicacion = 2;
                 j.DarAltaJaula();
 
@@ -33,7 +33,7 @@ namespace UnitTests
             try
             {
                 ModeloJaula j = new ModeloJaula();
-                j.IdJaula = 5;
+                j.IdJaula = 4;
                 j.DarBajaJaula();
                 Assert.IsTrue(true);
             }
@@ -50,8 +50,8 @@ namespace UnitTests
             {
                 ModeloJaula j = new ModeloJaula();
                 j.IdJaula = 3;
-                j.DescripcionJaula = "bbbbbb";
-                j.IdUbicacion = 4;
+                j.DescripcionJaula = "30 * 50";
+                j.IdUbicacion = 1;
                 j.ModificarJaula();
 
                 Assert.IsTrue(true);

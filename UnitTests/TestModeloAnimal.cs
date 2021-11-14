@@ -34,7 +34,7 @@ namespace UnitTests
             try
             {
                 ModeloAnimal a = new ModeloAnimal();
-                a.IdAnimal = 5;
+                a.IdAnimal = 4;
                 a.DarBajaAnimal();
                 Assert.IsTrue(true);
             }
@@ -51,9 +51,9 @@ namespace UnitTests
             {
                 ModeloAnimal a = new ModeloAnimal();
                 a.IdAnimal = 1;
-                a.NombreAnimal = "Penguin";
-                a.DescripcionAnimal = "SuperNefasto";
-                a.IdJ = 4;
+                a.NombreAnimal = "Pinguino";
+                a.DescripcionAnimal = "Ave que no vuela";
+                a.IdJ = 2;
                 a.ModificarAnimal();
 
                 Assert.IsTrue(true);

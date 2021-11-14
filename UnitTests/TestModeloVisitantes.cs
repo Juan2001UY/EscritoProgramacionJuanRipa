@@ -14,8 +14,8 @@ namespace UnitTests
             try
             {
                 ModeloVisitante v = new ModeloVisitante();
-                v.Cedula = "33333";
-                v.NombreVisitante = "Jorgepp";
+                v.Cedula = "66666666";
+                v.NombreVisitante = "Jorge";
                 v.DarAltaVisitante();
 
                 Assert.IsTrue(true);
@@ -33,7 +33,7 @@ namespace UnitTests
          try
          {
             ModeloVisitante v = new ModeloVisitante();
-            v.IdVisitante = 13;
+            v.IdVisitante = 5;
             v.DarBajaVisitante();
             Assert.IsTrue(true);
          }
@@ -49,9 +49,9 @@ namespace UnitTests
             try
             {
                 ModeloVisitante v = new ModeloVisitante();
-                v.IdVisitante = 12;
-                v.Cedula = "1144888";
-                v.NombreVisitante = "Pedro";
+                v.IdVisitante = 1;
+                v.Cedula = "11111111";
+                v.NombreVisitante = "Juan Andres";
                 v.ModificarVisitante();
 
                 Assert.IsTrue(true);

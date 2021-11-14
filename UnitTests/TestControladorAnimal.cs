@@ -13,7 +13,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorAnimal.AltaAnimal("asdsad", "vcvxvxc", 9);
+                CapaLogica.ControladorAnimal.AltaAnimal("Vibora", "Larga", 2);
 
                 Assert.IsTrue(true);
             }
@@ -42,7 +42,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorAnimal.ModificarAnimal(3, "qwdwqwd", "qwdwqxz", 8);
+                CapaLogica.ControladorAnimal.ModificarAnimal(3, "Pez", "Muchos colores", 3);
                 Assert.IsTrue(true);
             }
             catch

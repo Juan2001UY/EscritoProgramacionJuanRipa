@@ -14,9 +14,9 @@ namespace UnitTests
             try
             {
                 ModeloCompra c = new ModeloCompra();
-                c.CedulaComprador = "112233";
-                c.Producto = "6 Espacios";
-                c.Precio = "50$";
+                c.CedulaComprador = "11111111";
+                c.Producto = "10 Espacios";
+                c.Precio = "100$";
                 c.DarAltaCompra();
 
                 Assert.IsTrue(true);
@@ -34,8 +34,8 @@ namespace UnitTests
             try
             {
                 ModeloCompra c = new ModeloCompra();
-                c.CedulaComprador = "669911";
-                c.NombreVisitante = "Joseeeee";
+                c.CedulaComprador = "88888888";
+                c.NombreVisitante = "Marcos";
                 c.DarAltaVisitanteDesdeCompra();
                 Assert.IsTrue(true);
             }
@@ -51,7 +51,7 @@ namespace UnitTests
             try
             {
                 ModeloCompra c = new ModeloCompra();
-                c.CedulaComprador = "1144888";
+                c.CedulaComprador = "22222222";
                 c.BuscarVisitanteParaCompra();
 
                 Assert.IsTrue(true);

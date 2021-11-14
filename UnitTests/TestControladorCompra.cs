@@ -13,7 +13,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorCompra.AltaCompra("112233", "6 Espacios", "$50");
+                CapaLogica.ControladorCompra.AltaCompra("11111111", "6 Espacios", "$50");
 
                 Assert.IsTrue(true);
             }
@@ -29,7 +29,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorCompra.AltaVisitanteDesdeCompra("111111", "Armando");
+                CapaLogica.ControladorCompra.AltaVisitanteDesdeCompra("99999999", "Jose");
             }
             catch
             {
@@ -42,7 +42,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorCompra.ObtenerVisitanteParaCompra("111111");
+                CapaLogica.ControladorCompra.ObtenerVisitanteParaCompra("11111111");
                 Assert.IsTrue(true);
             }
             catch

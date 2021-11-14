@@ -13,7 +13,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorJaula.AltaJaula("sdsadsadad", 3);
+                CapaLogica.ControladorJaula.AltaJaula("200 * 200", 3);
 
                 Assert.IsTrue(true);
             }
@@ -29,7 +29,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorJaula.BajaJaula(7);
+                CapaLogica.ControladorJaula.BajaJaula(5);
             }
             catch
             {
@@ -42,7 +42,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorJaula.ModificarJaula("llllkkkjj", 6, 8);
+                CapaLogica.ControladorJaula.ModificarJaula("79 * 21", 1, 1);
                 Assert.IsTrue(true);
             }
             catch

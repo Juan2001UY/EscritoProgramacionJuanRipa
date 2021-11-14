@@ -13,7 +13,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorEspacio.AltaEspacio("fdfdsfs", "gfbfgbfgbfg");
+                CapaLogica.ControladorEspacio.AltaEspacio("Desierto", "Arido");
 
                 Assert.IsTrue(true);
             }
@@ -42,7 +42,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorEspacio.ModificarEspacio("ascavbfb", "xvcbggfbdff", 8);
+                CapaLogica.ControladorEspacio.ModificarEspacio("Oceano", "Agua", 3);
                 Assert.IsTrue(true);
             }
             catch

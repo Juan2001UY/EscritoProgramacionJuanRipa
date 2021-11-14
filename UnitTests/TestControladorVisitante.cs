@@ -14,7 +14,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorVisitante.AltaVisitante("777777", "eeeeeeee");
+                CapaLogica.ControladorVisitante.AltaVisitante("77777777", "Francisco");
 
                 Assert.IsTrue(true);
             }
@@ -30,7 +30,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorVisitante.BajaVisitante(14);
+                CapaLogica.ControladorVisitante.BajaVisitante(4);
             }
             catch
             {
@@ -43,7 +43,7 @@ namespace UnitTests
         {
             try
             {
-                CapaLogica.ControladorVisitante.ModificarVisitante("999999", "iiiiiii", 12);
+                CapaLogica.ControladorVisitante.ModificarVisitante("10101010", "Martin", 3);
                 Assert.IsTrue(true);
             }
             catch
